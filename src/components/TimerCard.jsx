@@ -59,11 +59,13 @@ const TimerCard = ({ timer, onToggle, onDelete, onEdit }) => {
           )}>
             {formatTime(remainingSeconds)}
           </span>
-          {description && (
-            <p className="mt-4 text-xs text-zinc-500 text-center line-clamp-2 max-w-[200px]">
-              {description}
-            </p>
-          )}
+          <div className="h-5 mt-4 w-[200px]">
+            {description && (
+              <p className="text-xs text-zinc-500 text-center line-clamp-1 truncate">
+                {description}
+              </p>
+            )}
+          </div>
         </div>
 
         <div className="flex justify-center mt-8">
